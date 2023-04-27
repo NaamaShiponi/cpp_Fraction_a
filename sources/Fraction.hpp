@@ -34,23 +34,23 @@ namespace ariel {
             Fraction operator--(int); // c--
 
 
-            friend std::ostream& operator<<(std::ostream& os, const Fraction& f);
-            friend std::istream& operator>>(std::istream& is, Fraction& f);
+            friend std::ostream& operator<<(std::ostream& oos, const Fraction& fract);
+            friend std::istream& operator>>(std::istream& iis, Fraction& fract);
 
 
-            friend bool operator==(const float& f, const Fraction& other);
-            friend bool operator!=(const float& f, const Fraction& other);
-            friend bool operator<(const float& f, const Fraction& other);
-            friend bool operator<=(const float& f, const Fraction& other);
-            friend bool operator>(const float& f, const Fraction& other);
-            friend bool operator>=(const float& f, const Fraction& other);
+            friend bool operator==(const float& fract, const Fraction& other);
+            friend bool operator!=(const float& fract, const Fraction& other);
+            friend bool operator<(const float& fract, const Fraction& other);
+            friend bool operator<=(const float& fract, const Fraction& other);
+            friend bool operator>(const float& fract, const Fraction& other);
+            friend bool operator>=(const float& fract, const Fraction& other);
 
 
 
-            friend Fraction operator+(const float& f, const Fraction& other);
-            friend Fraction operator-(const float& f, const Fraction& other);
-            friend Fraction operator*(const float& f, const Fraction& other);
-            friend Fraction operator/(const float& f, const Fraction& other);
+            friend Fraction operator+(const float& fract, const Fraction& other);
+            friend Fraction operator-(const float& fract, const Fraction& other);
+            friend Fraction operator*(const float& fract, const Fraction& other);
+            friend Fraction operator/(const float& fract, const Fraction& other);
     };
 
 

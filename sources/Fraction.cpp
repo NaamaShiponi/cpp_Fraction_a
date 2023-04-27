@@ -39,36 +39,36 @@ Fraction Fraction::operator--(int){return *this;}
 
 
 
-std::ostream& ariel::operator<<(std::ostream& os, const Fraction& f) {
-    os <<" " << f.numerator << "/" << f.denominator;
-    return os;
+std::ostream& ariel::operator<<(std::ostream& oos, const Fraction& fract) {
+    oos <<" " << fract.numerator << "/" << fract.denominator;
+    return oos;
 }
 
-std::istream& operator>>(std::istream& is, Fraction& f) {
+std::istream& operator>>(std::istream& iis, Fraction& fract) {
     int numerator, denominator;
     char c;
-    is >> numerator >> c >> denominator;
+    iis >> numerator >> c >> denominator;
     if (c != '/') {
-        is.setstate(std::ios::failbit);
-        return is;
+        iis.setstate(std::ios::failbit);
+        return iis;
     }
-    f = Fraction(numerator, denominator);
-    return is;
+    fract = Fraction(numerator, denominator);
+    return iis;
 }
 
-bool ariel::operator==(const float& f, const Fraction& other) {return false;}
-bool ariel::operator!=(const float& f, const Fraction& other) {return false;}
-bool ariel::operator<(const float& f, const Fraction& other) {return false;}
-bool ariel::operator<=(const float& f, const Fraction& other) {return false;}
-bool ariel::operator>(const float& f, const Fraction& other) {return false;}
-bool ariel::operator>=(const float& f, const Fraction& other) {return false;}
+bool ariel::operator==(const float& fract, const Fraction& other) {return false;}
+bool ariel::operator!=(const float& fract, const Fraction& other) {return false;}
+bool ariel::operator<(const float& fract, const Fraction& other) {return false;}
+bool ariel::operator<=(const float& fract, const Fraction& other) {return false;}
+bool ariel::operator>(const float& fract, const Fraction& other) {return false;}
+bool ariel::operator>=(const float& fract, const Fraction& other) {return false;}
 
 
 
-Fraction ariel::operator+(const float& f, const Fraction& other)  { return Fraction(0,0);}
-Fraction ariel::operator-(const float& f, const Fraction& other)  { return Fraction(0,0);}
-Fraction ariel::operator*(const float& f, const Fraction& other)  { return Fraction(0,0);}
-Fraction ariel::operator/(const float& f, const Fraction& other)  { return Fraction(0,0);}
+Fraction ariel::operator+(const float& fract, const Fraction& other)  { return Fraction(0,0);}
+Fraction ariel::operator-(const float& fract, const Fraction& other)  { return Fraction(0,0);}
+Fraction ariel::operator*(const float& fract, const Fraction& other)  { return Fraction(0,0);}
+Fraction ariel::operator/(const float& fract, const Fraction& other)  { return Fraction(0,0);}
 
 
 
